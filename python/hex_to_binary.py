@@ -11,4 +11,4 @@ def hex_to_binary(hex_number: str, num_digits: int = 8) -> str:
         string representation of a binary number 0-padded
         to a minimum length of <num_digits>
     """
-    return str(int(hex_number, 16)).zfill(num_digits)
+    return str(bin(int(hex_number, 16)))[2:].zfill(num_digits)
