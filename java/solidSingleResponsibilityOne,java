@@ -1,0 +1,29 @@
+/**
+ * A class to perform buy and sell transactions related to securities such
+ * that an investor can specify a security by its ticker, the quantity of
+ * shares to buy or sell, and the market price at which to execute the
+ * transaction.
+ */
+public class Transaction {
+
+    /**
+     * Purchases a specified number of shares of a given security at a price.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to purchase
+     * @param price float price at which to make the purchase
+     */
+    private void Buy(String stock, int quantity, float price){
+        // Buy stock
+    }
+
+    /**
+     * Sells a specified number of shares of a security at a given price.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to sell
+     * @param price float price at which to sell
+     */
+    private void Sell(String stock, int quantity, float price){
+        // Sell stock
+    }
+
+}
