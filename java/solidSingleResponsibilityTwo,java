@@ -1,0 +1,64 @@
+/**
+ * A class to perform buy and sell transactions related to securities such
+ * that an investor can specify a security by its ticker, the quantity of
+ * shares to buy or sell, and the market price at which to execute the
+ * transaction.
+ */
+class Transaction2{
+
+    /**
+     * Implementation of the Buy.execute() method to remove 
+     * responsibility of change.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to purchase
+     * @param price float price at which to make the purchase
+     */
+    private void Buy(String stock, int quantity, float price){
+        Buy.execute(stock, quantity, price);
+    }
+
+    /**
+     * Implementation of the Sell.execute() method to remove 
+     * responsibility of change.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to purchase
+     * @param price float price at which to make the purchase
+     */
+    private void Sell(String stock, int quantity, float price){
+        Sell.execute(stock, quantity, price);
+    }
+}
+
+/**
+ * Implementation of Buy-related actions in a manner that preserves
+ * single-responsibility principles.
+ */
+class Buy{
+
+    /**
+     * Implementation of actions required to buy a security.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to purchase
+     * @param price float price at which to make the purchase
+     */
+    static void execute(String stock, int quantity, float price){
+        // Execute buy action here
+    }
+}
+
+/**
+ * Implementation of Sell-related actions in a manner that preserves
+ * single-responsibility principles.
+ */
+class Sell{
+
+    /**
+     * Implementation of actions required to sell a security.
+     * @param stock String ticker of security
+     * @param quantity int number of shares to purchase
+     * @param price float price at which to make the purchase
+     */
+    static void execute(String stock, int quantity, float price){
+        // Execute sell action here
+    }
+}
