@@ -1,3 +1,5 @@
+package StateArticle;
+
 /**
  * A class to demonstrate the difference in functional and imperative I/O
  * illustrating the concept of State.
@@ -7,6 +9,10 @@ public class Stateful {
     // Declare a magic value
     int magicNumber;
 
+    /**
+     * Basic constructor requiring an integer to be used as the magic number.
+     * @param a int - value to be used as the object's magic number.
+     */
     public Stateful(int a){
         this.magicNumber = a;
     }
@@ -48,30 +54,40 @@ public class Stateful {
         return a + b + getMagicNumber();
     }
 
-    public static void main(String[] args) {
+/**
+ * Driver class to illustrate the functionality of Stateful, its methods,
+ * and how they represent a non-Stateful (functional) and Stateful (imperative)
+ * design.
+ */
+public static void main(String[] args) {
 
-        // Define our integers
-        int a = 6;
-        int b = 9;
+    // Define our integers
+    int a = 6;
+    int b = 9;
 
-        // Test functional method
-        // Note use of static method here.
-        System.out.println("a + b = " + Stateful.addIntegers(a, b));
+    // Announce current integer values
+    System.out.println("Value of a = " + a);
+    System.out.println("Value of b = " + b);
 
-        // Test imperative method
-        // Note use of object instantiation here, with specified magic number.
-        Stateful stateObject = new Stateful(3);
-        System.out.println("Current Magic Number = " + stateObject.getMagicNumber());
-        System.out.println("a + b = " + stateObject.addIntegersStatefully(a, b));
 
-        // Change the magic number
-        stateObject.setMagicNumber(6);
-        System.out.println("Current Magic Number = " + stateObject.getMagicNumber());
+    // Test functional method
+    // Note use of static method here.
+    System.out.println("a + b = " + Stateful.addIntegers(a, b));
 
-        // Test functional method again
-        System.out.println("a + b = " + Stateful.addIntegers(a, b));
+    // Test imperative method
+    // Note use of object instantiation here, with specified magic number.
+    Stateful stateObject = new Stateful(3);
+    System.out.println("Current Magic Number = " + stateObject.getMagicNumber());
+    System.out.println("a + b = " + stateObject.addIntegersStatefully(a, b));
 
-        // Test imperative method again
-        System.out.println("a + b = " + stateObject.addIntegersStatefully(a, b));
+    // Change the magic number
+    stateObject.setMagicNumber(6);
+    System.out.println("Current Magic Number = " + stateObject.getMagicNumber());
+
+    // Test functional method again
+    System.out.println("a + b = " + Stateful.addIntegers(a, b));
+
+    // Test imperative method again
+    System.out.println("a + b = " + stateObject.addIntegersStatefully(a, b));
     }
 }
