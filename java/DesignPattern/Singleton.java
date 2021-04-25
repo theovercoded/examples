@@ -1,9 +1,8 @@
-package DesignPatterns;
-
 /**
  * A basic implementation of the Singleton pattern such
  * that only a single instance of the class may be
  * present in the application.
+ * @author - theestcoastwest
  */
 public class Singleton {
 
